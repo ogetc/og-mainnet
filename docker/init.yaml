@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  ogetc:
+    image: ogetclab/ogetc:latest
+    command: nodeos --data-dir /opt/ogetc/data --config-dir /opt/ogetc/config --genesis-json=/opt/ogetc/config/genesis.json --delete-all-blocks
+    hostname: ogetc
+    ports:
+      - 8888:8888
+      - 9876:9876
+    volumes:
+      - /data/ogetc/testnet/data:/opt/ogetc/data
+      - /data/ogetc/testnet/config:/opt/ogetc/config
