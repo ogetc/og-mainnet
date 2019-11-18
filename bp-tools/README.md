@@ -23,8 +23,8 @@ claimer权限的配置可通过脚本`setclaimer.sh`实现，具体步骤如下�
 
 ```shell
 cd 
-git clone https://github.com/GOCLAB/GOC-mainnet.git
-cd ./GOC-mainnet/bp-tools
+git clone https://github.com/OGLAB/OG-mainnet.git
+cd ./OG-mainnet/bp-tools
 vim ./setclaimer.sh
 # 将setclaimer.sh中的<yourbpname>和<yournewkey>分别替换成你的BP账户名及新创建的claimer公钥
 # <your cleos dir>替换为可执行cleos路径，<your keosd --http-server-address>替换为本地keosd钱包服务的http-server-address
@@ -50,6 +50,6 @@ crontab -e
 ```
 在文件中添加下行并保存即可
 
-`15 * * * * ~/GOC-mainnet/bp-tools/claim.sh > ~/GOC-mainnet/bp-tools/claim.log 2>&1`
+`15 * * * * ~/OG-mainnet/bp-tools/claim.sh > ~/OG-mainnet/bp-tools/claim.log 2>&1`
 
-claim.sh将会在每小时的15分执行一次，执行结果将会保存在~/GOC-mainnet/bp-tools/claim.log中
+claim.sh将会在每小时的15分执行一次，执行结果将会保存在~/OG-mainnet/bp-tools/claim.log中
